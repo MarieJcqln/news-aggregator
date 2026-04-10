@@ -1,0 +1,133 @@
+[debug] [2026-04-09T12:36:24.136Z] ----------------------------------------------------------------------
+[debug] [2026-04-09T12:36:24.139Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jacqu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-04-09T12:36:24.140Z] CLI Version:   15.13.0
+[debug] [2026-04-09T12:36:24.140Z] Platform:      win32
+[debug] [2026-04-09T12:36:24.140Z] Node Version:  v22.13.1
+[debug] [2026-04-09T12:36:24.140Z] Time:          Thu Apr 09 2026 14:36:24 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2026-04-09T12:36:24.141Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jacqu\news-aggregator
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-04-09T12:38:35.714Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-09T12:38:35.714Z] > authorizing via signed-in user (jacquelin-marie@orange.fr)
+[debug] [2026-04-09T12:38:35.716Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:35.717Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:35.718Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2026-04-09T12:38:36.476Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-04-09T12:38:36.476Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] 
+=== Firestore Setup
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2026-04-09T12:38:42.966Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:42.966Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:42.966Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/firestore.googleapis.com [none]
+[debug] [2026-04-09T12:38:42.966Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/firestore.googleapis.com  x-goog-user-project=news-aggregator-a6459
+[debug] [2026-04-09T12:38:43.761Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/firestore.googleapis.com 200
+[debug] [2026-04-09T12:38:43.761Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/firestore.googleapis.com [omitted]
+[info] +  firestore: required API firestore.googleapis.com is enabled 
+[debug] [2026-04-09T12:38:43.769Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:43.769Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:43.769Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/news-aggregator-a6459/databases [none]
+[debug] [2026-04-09T12:38:44.275Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/news-aggregator-a6459/databases 200
+[debug] [2026-04-09T12:38:44.275Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/news-aggregator-a6459/databases {"databases":[{"name":"projects/news-aggregator-a6459/databases/(default)","uid":"e9d2a135-0d9b-4ffa-902f-ab4449cedb55","createTime":"2026-04-09T12:32:38.271801Z","updateTime":"2026-04-09T12:32:38.271801Z","locationId":"eur3","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2026-04-09T12:32:38.271801Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"e","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"IJeDyuLk4JMDMLmW3rHj4JMD"}]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2026-04-09T12:38:50.036Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:50.036Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:50.037Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/news-aggregator-a6459/releases pageSize=10&pageToken=
+[debug] [2026-04-09T12:38:50.319Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/news-aggregator-a6459/releases 200
+[debug] [2026-04-09T12:38:50.319Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/news-aggregator-a6459/releases {"releases":[{"name":"projects/news-aggregator-a6459/releases/cloud.firestore","rulesetName":"projects/news-aggregator-a6459/rulesets/b2b05691-0475-4d8a-80b1-8bf13c3d63bf","createTime":"2026-04-09T12:32:40.664464Z","updateTime":"2026-04-09T12:32:40.664464Z"}]}
+[debug] [2026-04-09T12:38:50.320Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:50.320Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:50.320Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/news-aggregator-a6459/rulesets/b2b05691-0475-4d8a-80b1-8bf13c3d63bf [none]
+[debug] [2026-04-09T12:38:50.958Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/news-aggregator-a6459/rulesets/b2b05691-0475-4d8a-80b1-8bf13c3d63bf 200
+[debug] [2026-04-09T12:38:50.959Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/news-aggregator-a6459/rulesets/b2b05691-0475-4d8a-80b1-8bf13c3d63bf [omitted]
+[info] i  Downloaded the existing Firestore Security Rules from the Firebase console 
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2026-04-09T12:38:52.675Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:52.675Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:52.675Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:52.676Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:52.676Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/news-aggregator-a6459/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2026-04-09T12:38:52.679Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/news-aggregator-a6459/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2026-04-09T12:38:52.864Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/news-aggregator-a6459/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2026-04-09T12:38:52.865Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/news-aggregator-a6459/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2026-04-09T12:38:53.310Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/news-aggregator-a6459/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2026-04-09T12:38:53.310Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/news-aggregator-a6459/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/news-aggregator-a6459/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] i  Downloaded the existing Firestore indexes from the Firebase console 
+[info] +  Wrote firestore.rules 
+[info] +  Wrote firestore.indexes.json 
+[info] 
+=== Functions Setup
+[debug] [2026-04-09T12:38:53.325Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-09T12:38:53.325Z] > authorizing via signed-in user (jacquelin-marie@orange.fr)
+[debug] [2026-04-09T12:38:53.325Z] [iam] checking project news-aggregator-a6459 for permissions ["firebase.projects.get"]
+[debug] [2026-04-09T12:38:53.326Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:53.326Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:53.326Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/news-aggregator-a6459:testIamPermissions [none]
+[debug] [2026-04-09T12:38:53.327Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/news-aggregator-a6459:testIamPermissions  x-goog-user-project=news-aggregator-a6459
+[debug] [2026-04-09T12:38:53.327Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/news-aggregator-a6459:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2026-04-09T12:38:53.967Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/news-aggregator-a6459:testIamPermissions 200
+[debug] [2026-04-09T12:38:53.968Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/news-aggregator-a6459:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2026-04-09T12:38:53.969Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:53.969Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:53.969Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:53.970Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:53.970Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-04-09T12:38:53.970Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/cloudfunctions.googleapis.com  x-goog-user-project=news-aggregator-a6459
+[debug] [2026-04-09T12:38:53.974Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/runtimeconfig.googleapis.com [none]
+[debug] [2026-04-09T12:38:53.974Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/runtimeconfig.googleapis.com  x-goog-user-project=news-aggregator-a6459
+[debug] [2026-04-09T12:38:54.876Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/cloudfunctions.googleapis.com 200
+[debug] [2026-04-09T12:38:54.876Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-04-09T12:38:54.877Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:54.877Z] Checked if tokens are valid: true, expires at: 1775741679288
+[debug] [2026-04-09T12:38:54.877Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2026-04-09T12:38:54.877Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/cloudfunctions.googleapis.com:enable  x-goog-user-project=news-aggregator-a6459
+[debug] [2026-04-09T12:38:54.879Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/runtimeconfig.googleapis.com 200
+[debug] [2026-04-09T12:38:54.879Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2026-04-09T12:38:55.894Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2026-04-09T12:38:55.894Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/news-aggregator-a6459/services/cloudfunctions.googleapis.com:enable [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/requirements.txt 
+[info] +  Wrote functions/.gitignore 
+[info] +  Wrote functions/main.py 
+[debug] [2026-04-09T12:39:43.319Z] Running command with virtualenv: command="C:\Users\jacqu\news-aggregator\functions\venv\Scripts\activate.bat", args=["","&&","pip3","install","--upgrade","pip"]
+[debug] [2026-04-09T12:39:48.997Z] Error: spawn "C:\Users\jacqu\news-aggregator\functions\venv\Scripts\activate.bat" ENOENT
+    at notFoundError (C:\Users\jacqu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:6:26)
+    at verifyENOENT (C:\Users\jacqu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:40:16)
+    at cp.emit (C:\Users\jacqu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:27:25)
+    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+    at Process.callbackTrampoline (node:internal/async_hooks:130:17)
+[error] 
+[error] Error: An unexpected error has occurred.
