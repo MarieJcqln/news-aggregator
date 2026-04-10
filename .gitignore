@@ -9,4 +9,5 @@ node_modules/
 .firebase/
 
 # Divers
-.DS_Storebackend/firebase-key.json
+.DS_Store
+backend/firebase-key.json
