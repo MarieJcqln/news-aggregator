@@ -5,9 +5,16 @@ from services.firebase_service import save_articles, get_articles_from_db
 
 router = APIRouter()
 
+""" @router.get("/")
+def get_articles(source: str = Query(default="all")):
+    return get_articles_from_db(source) """
 @router.get("/")
 def get_articles(source: str = Query(default="all")):
-    return get_articles_from_db(source)
+    try:
+        return get_articles_from_db(source)
+    except Exception as e:
+        print(f"Erreur Firestore : {e}")
+        return []
 
 @router.post("/refresh")
 def refresh_articles():
