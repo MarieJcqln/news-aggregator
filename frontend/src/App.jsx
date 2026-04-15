@@ -11,7 +11,7 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/articles/?source=${filter}`)
+    fetch(`https://news-aggregator-c8rj.onrender.com/articles/?source=${filter}`)
       .then(res => res.json())
       .then(data => {
         setArticles(data)
