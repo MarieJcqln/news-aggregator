@@ -22,7 +22,7 @@ def refresh_articles():
     news = fetch_news()
     all_articles = rss + news
     saved = save_articles(all_articles)
-    return {"message": f"{saved} articles sauvegardés dans Firestore"}
+    return {"saved": saved}
 
 @router.get("/{article_id}")
 def get_article(article_id: str):
