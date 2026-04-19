@@ -30,9 +30,13 @@ def save_articles(articles: list):
 def get_articles_from_db(source: str = "all"):
     db = get_db()
     collection = db.collection("articles")
-    if source != "all":
+    
+    if source == "all":
+        query = collection.limit(50)
+    elif source in ["rss", "api", "newsapi"]:
         query = collection.where("type", "==", source).limit(50)
     else:
-        query = collection.limit(50)
+        query = collection.where("source", "==", source).limit(50)
+    
     docs = query.stream()
     return [doc.to_dict() for doc in docs]

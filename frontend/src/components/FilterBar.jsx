@@ -3,7 +3,12 @@ import useWindowSize from '../hooks/useWindowSize'
 const filters = [
   { value: 'all', label: 'Tous' },
   { value: 'rss', label: 'RSS' },
-  { value: 'news', label: 'NewsAPI' },
+  //{ value: 'new-york-times', label: 'NYTimes' },
+  //{ value: 'news', label: 'NewsAPI' },
+  { value: 'the-guardian', label: 'The Guardian' },
+  { value: 'lemonde', label: 'Le Monde' },
+  { value: 'bbc', label: 'BBC' },
+  { value: 'reuters', label: 'Reuters' },
 ]
 
 export default function FilterBar({ filter, setFilter }) {
@@ -12,11 +17,14 @@ export default function FilterBar({ filter, setFilter }) {
 
   return (
     <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      gap: '0.75rem',
-      padding: isMobile ? '0.75rem 1rem 1rem' : '0.5rem 1rem 1.5rem'
-    }}>
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  gap: '0.5rem',
+  padding: isMobile ? '0.75rem 1rem 1rem' : '0.5rem 2rem 1.5rem',
+  maxWidth: '1100px',
+  margin: '0 auto'
+}}>
       {filters.map(f => (
         <button
           key={f.value}
