@@ -1,5 +1,6 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
+from datetime import datetime, timezone
 import os
 import json
 
@@ -23,6 +24,7 @@ def save_articles(articles: list):
         if not article.get("id"):
             continue
         doc_id = article["id"].replace("/", "_").replace(".", "_")[:100]
+        article["fetched_at"] = datetime.now(timezone.utc).isoformat()
         collection.document(doc_id).set(article)
         saved += 1
     return saved
