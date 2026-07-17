@@ -1,4 +1,4 @@
-# 📰 La Revue — News Aggregator
+# 📰 News Aggregator
 
 A full-stack news aggregator that collects articles from multiple international sources and displays them through a clean, editorial-inspired interface.
 
