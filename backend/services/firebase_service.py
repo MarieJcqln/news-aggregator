@@ -43,23 +43,30 @@ def get_articles_from_db(source: str = "all"):
     docs = query.stream()
     articles = [doc.to_dict() for doc in docs]
 
+    from datetime import datetime, timezone
+
     def parse_date(article):
         date_str = article.get("published_at") or article.get("fetched_at") or ""
-        try:
-            from datetime import datetime
-            for fmt in [
-                "%Y-%m-%dT%H:%M:%SZ",
-                "%Y-%m-%dT%H:%M:%S%z",
-                "%a, %d %b %Y %H:%M:%S %z",
-                "%a, %d %b %Y %H:%M:%S GMT",
-            ]:
-                try:
-                    return datetime.strptime(date_str, fmt)
-                except ValueError:
-                    continue
-        except Exception:
-            pass
-        return ""
+        if not date_str:
+            return datetime.min.replace(tzinfo=timezone.utc)
+        for fmt in [
+            "%Y-%m-%dT%H:%M:%SZ",
+            "%Y-%m-%dT%H:%M:%S%z",
+            "%a, %d %b %Y %H:%M:%S %z",
+            "%a, %d %b %Y %H:%M:%S GMT",
+        ]:
+            try:
+                dt = datetime.strptime(date_str, fmt)
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                return dt
+            except ValueError:
+                continue
+        return datetime.min.replace(tzinfo=timezone.utc)
 
-    articles.sort(key=parse_date, reverse=True)
+    try:
+        articles.sort(key=parse_date, reverse=True)
+    except Exception as e:
+        print(f"Erreur tri : {e}")
+
     return articles
