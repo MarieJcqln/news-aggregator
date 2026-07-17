@@ -198,7 +198,6 @@ Two cron jobs:
 ---
 
 ## Author
-Marie JACQUELIN
 
 **Marie Jacquelin** — IMAC 3rd year, Web specialization  
 ESIEE Paris / Université Gustave Eiffel · 2025–2026
